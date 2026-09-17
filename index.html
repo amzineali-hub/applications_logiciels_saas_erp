@@ -33,6 +33,20 @@
     .feature-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
     .feature-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--ink-dim); line-height: 1.5; }
     .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); margin-top: 8px; flex-shrink: 0; }
+    .icon-badge {
+      box-shadow: 0 12px 26px -6px rgba(0,0,0,0.45), inset 0 2px 3px rgba(255,255,255,0.35), inset 0 -6px 10px rgba(0,0,0,0.25);
+      animation: iconFloat 3.2s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .icon-badge:hover {
+      transform: scale(1.08) rotate(-4deg);
+      box-shadow: 0 16px 34px -6px rgba(0,0,0,0.55), inset 0 2px 3px rgba(255,255,255,0.4), inset 0 -6px 10px rgba(0,0,0,0.3);
+    }
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(2deg); }
+    }
+
     .solutions-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
     .why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
@@ -101,14 +115,14 @@
 
         <!-- RestoIA 360 -->
         <div class="card">
-          <div style="width:56px;height:56px;border-radius:16px;background:rgba(201,162,75,0.14);display:flex;align-items:center;justify-content:center;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="3" x2="7" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/><line x1="11" y1="3" x2="11" y2="9"/>
-              <path d="M7 9c0 2 2 2 2 2s2 0 2-2"/><line x1="9" y1="11" x2="9" y2="21"/>
-              <path d="M16 3c2 2 2 6 0 8l-1 1v9"/>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+            <div class="pill">Restauration</div>
+            <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #FFC15E 0%, #E8720C 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:0s;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="3" x2="7" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/><line x1="11" y1="3" x2="11" y2="9"/><path d="M7 9c0 2 2 2 2 2s2 0 2-2"/><line x1="9" y1="11" x2="9" y2="21"/><path d="M16 3c2 2 2 6 0 8l-1 1v9"/>
             </svg>
           </div>
-          <div class="pill">Restauration</div>
+          </div>
           <h3 style="font-size: 24px;">RestoIA 360</h3>
           <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Automatisez la gestion de votre restaurant à 360°. Déjà en production au restaurant Mouda Palace (Fès).</p>
           <ul class="feature-list">
@@ -122,13 +136,14 @@
 
         <!-- RelaiCompta -->
         <div class="card">
-          <div style="width:56px;height:56px;border-radius:16px;background:rgba(201,162,75,0.14);display:flex;align-items:center;justify-content:center;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="7" height="9" rx="1"/><rect x="14" y="11" width="7" height="9" rx="1"/>
-              <path d="M10 8h6"/><path d="M14 6l2 2-2 2"/><path d="M14 16h-6"/><path d="M10 14l-2 2 2 2"/>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+            <div class="pill">Comptabilité</div>
+            <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #5FEAD4 0%, #0E8074 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:0.4s;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="7" height="9" rx="1"/><rect x="14" y="11" width="7" height="9" rx="1"/><path d="M10 8h6"/><path d="M14 6l2 2-2 2"/><path d="M14 16h-6"/><path d="M10 14l-2 2 2 2"/>
             </svg>
           </div>
-          <div class="pill">Comptabilité</div>
+          </div>
           <h3 style="font-size: 24px;">RelaiCompta</h3>
           <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Le relais digital entre les cabinets d'experts-comptables marocains et leurs clients.</p>
           <ul class="feature-list">
@@ -142,14 +157,14 @@
 
         <!-- Gestion Scolaire Augmentée -->
         <div class="card">
-          <div style="width:56px;height:56px;border-radius:16px;background:rgba(201,162,75,0.14);display:flex;align-items:center;justify-content:center;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3 2 8l10 5 10-5-10-5z"/>
-              <path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/>
-              <line x1="22" y1="8" x2="22" y2="14"/>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+            <div class="pill">Éducation</div>
+            <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #B49BFF 0%, #6D28D9 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:0.8s;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/><line x1="22" y1="8" x2="22" y2="14"/>
             </svg>
           </div>
-          <div class="pill">Éducation</div>
+          </div>
           <h3 style="font-size: 24px;">Gestion Scolaire Augmentée</h3>
           <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">La gestion scolaire pensée pour le système éducatif marocain, du préscolaire au groupe multi-cycles.</p>
           <ul class="feature-list">
@@ -163,13 +178,14 @@
 
         <!-- Veille Marchés -->
         <div class="card">
-          <div style="width:56px;height:56px;border-radius:16px;background:rgba(201,162,75,0.14);display:flex;align-items:center;justify-content:center;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A24B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="3" width="10" height="14" rx="1"/><line x1="7" y1="7" x2="11" y2="7"/><line x1="7" y1="10" x2="11" y2="10"/>
-              <circle cx="16" cy="16" r="4"/><line x1="19" y1="19" x2="22" y2="22"/>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+            <div class="pill">Secteur public</div>
+            <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #FF9E8A 0%, #D62839 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:1.2s;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="3" width="10" height="14" rx="1"/><line x1="7" y1="7" x2="11" y2="7"/><line x1="7" y1="10" x2="11" y2="10"/><circle cx="16" cy="16" r="4"/><line x1="19" y1="19" x2="22" y2="22"/>
             </svg>
           </div>
-          <div class="pill">Secteur public</div>
+          </div>
           <h3 style="font-size: 24px;">Veille Marchés</h3>
           <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Le suivi des appels d'offres marocains, automatisé pour ne plus rien manquer.</p>
           <ul class="feature-list">
