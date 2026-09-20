@@ -79,6 +79,59 @@
       100% { transform: translateY(0) rotate(0deg) scale(1); }
     }
 
+    .clothesline-wrap { position: relative; padding-top: 14px; }
+    .clothesline-rope {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(560px, 90%);
+      height: 3px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0.85) 8%, rgba(255,255,255,0.85) 92%, rgba(255,255,255,0.05));
+      border-radius: 3px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    .clothesline-item {
+      transform-origin: top center;
+      animation-name: sway;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @keyframes sway {
+      0%   { transform: rotate(-3.5deg) translateX(-3px); }
+      50%  { transform: rotate(3.5deg) translateX(3px); }
+      100% { transform: rotate(-3.5deg) translateX(-3px); }
+    }
+    .clothespin {
+      width: 11px;
+      height: 20px;
+      background: linear-gradient(180deg, #E8C077 0%, var(--gold) 100%);
+      border-radius: 3px;
+      margin-bottom: -6px;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.45);
+      position: relative;
+      z-index: 2;
+    }
+    .clothespin::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      bottom: 0;
+      width: 1px;
+      background: rgba(0,0,0,0.25);
+    }
+    .clothesline-img {
+      width: 230px;
+      max-width: 62vw;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 22px 44px -10px rgba(0,0,0,0.6), 0 10px 18px -6px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
     .solutions-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
     .why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
@@ -272,6 +325,30 @@
         <div style="display: flex; flex-direction: column; gap: 10px;">
           <h3 style="font-size: 19px; color: var(--gold);">Sur mesure</h3>
           <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Chaque déploiement est adapté à vos process réels, pas l'inverse.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARTE DE VISITE -->
+  <div style="width: 100%; padding: 90px 32px 110px; background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 620px; margin: 0 auto 64px; display: flex; flex-direction: column; gap: 14px;">
+        <div class="eyebrow" style="align-self: center;">Contact direct</div>
+        <h2 style="font-size: 34px; color: var(--ink);">Ali Amzine — Ingénierie logicielle</h2>
+      </div>
+
+      <div class="clothesline-wrap">
+        <div class="clothesline-rope"></div>
+        <div style="display:flex; align-items:flex-start; justify-content:center; gap: 64px; flex-wrap: wrap; padding-top: 6px;">
+          <div class="clothesline-item" style="animation-duration: 4.6s; animation-delay: 0s;">
+            <div class="clothespin"></div>
+            <img src="assets/carte-visite-recto.png" alt="Media Tower — carte de visite, recto" class="clothesline-img">
+          </div>
+          <div class="clothesline-item" style="animation-duration: 5.3s; animation-delay: -2.1s;">
+            <div class="clothespin"></div>
+            <img src="assets/carte-visite-verso.png" alt="Ali Amzine — carte de visite, verso" class="clothesline-img">
+          </div>
         </div>
       </div>
     </div>
