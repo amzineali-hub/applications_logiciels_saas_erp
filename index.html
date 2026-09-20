@@ -79,17 +79,27 @@
       100% { transform: translateY(0) rotate(0deg) scale(1); }
     }
 
-    .clothesline-wrap { position: relative; padding-top: 14px; }
+    .clothesline-wrap { position: relative; padding-top: 16px; }
     .clothesline-rope {
       position: absolute;
-      top: 0;
+      top: 6px;
       left: 50%;
       transform: translateX(-50%);
-      width: min(560px, 90%);
-      height: 3px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0.85) 8%, rgba(255,255,255,0.85) 92%, rgba(255,255,255,0.05));
+      width: min(1040px, 96%);
+      height: 5px;
       border-radius: 3px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      background:
+        repeating-linear-gradient(60deg,
+          rgba(0,0,0,0.18) 0px, rgba(0,0,0,0.18) 1.5px,
+          rgba(255,255,255,0.35) 1.5px, rgba(255,255,255,0.35) 3px),
+        linear-gradient(180deg, #E6D9B8 0%, #B8A377 100%);
+      box-shadow: 0 3px 4px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.3);
+    }
+    .clothesline-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0 2%;
     }
     .clothesline-item {
       transform-origin: top center;
@@ -106,23 +116,12 @@
       100% { transform: rotate(-3.5deg) translateX(-3px); }
     }
     .clothespin {
-      width: 11px;
-      height: 20px;
-      background: linear-gradient(180deg, #E8C077 0%, var(--gold) 100%);
-      border-radius: 3px;
-      margin-bottom: -6px;
-      box-shadow: 0 3px 5px rgba(0,0,0,0.45);
+      width: 30px;
+      height: auto;
+      margin-bottom: -14px;
       position: relative;
       z-index: 2;
-    }
-    .clothespin::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 15%;
-      bottom: 0;
-      width: 1px;
-      background: rgba(0,0,0,0.25);
+      filter: drop-shadow(0 4px 5px rgba(0,0,0,0.5));
     }
     .clothesline-img {
       width: 230px;
@@ -340,13 +339,41 @@
 
       <div class="clothesline-wrap">
         <div class="clothesline-rope"></div>
-        <div style="display:flex; align-items:flex-start; justify-content:center; gap: 64px; flex-wrap: wrap; padding-top: 6px;">
+        <div class="clothesline-row">
           <div class="clothesline-item" style="animation-duration: 4.6s; animation-delay: 0s;">
-            <div class="clothespin"></div>
+            <svg class="clothespin" viewBox="0 0 30 46" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="wood1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#E7B978"/>
+                  <stop offset="55%" stop-color="#C98F4C"/>
+                  <stop offset="100%" stop-color="#A8703A"/>
+                </linearGradient>
+              </defs>
+              <rect x="1" y="2" width="11" height="42" rx="5" fill="url(#wood1)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="18" y="2" width="11" height="42" rx="5" fill="url(#wood1)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="3.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <rect x="20.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <ellipse cx="15" cy="15" rx="7" ry="4.5" fill="#9AA0AA" stroke="#6B6F76" stroke-width="1.2"/>
+              <circle cx="15" cy="15" r="2" fill="#4A4D52"/>
+            </svg>
             <img src="assets/carte-visite-recto.png" alt="Media Tower — carte de visite, recto" class="clothesline-img">
           </div>
           <div class="clothesline-item" style="animation-duration: 5.3s; animation-delay: -2.1s;">
-            <div class="clothespin"></div>
+            <svg class="clothespin" viewBox="0 0 30 46" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="wood2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#E7B978"/>
+                  <stop offset="55%" stop-color="#C98F4C"/>
+                  <stop offset="100%" stop-color="#A8703A"/>
+                </linearGradient>
+              </defs>
+              <rect x="1" y="2" width="11" height="42" rx="5" fill="url(#wood2)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="18" y="2" width="11" height="42" rx="5" fill="url(#wood2)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="3.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <rect x="20.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <ellipse cx="15" cy="15" rx="7" ry="4.5" fill="#9AA0AA" stroke="#6B6F76" stroke-width="1.2"/>
+              <circle cx="15" cy="15" r="2" fill="#4A4D52"/>
+            </svg>
             <img src="assets/carte-visite-verso.png" alt="Ali Amzine — carte de visite, verso" class="clothesline-img">
           </div>
         </div>
