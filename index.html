@@ -101,6 +101,22 @@
       justify-content: space-between;
       padding: 0 2%;
     }
+    .hero-wrap { position: relative; }
+    .hero-clothesline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-clothesline .clothesline-rope { width: min(1300px, 98%); }
+    .hero-clothesline .clothesline-row { padding: 0 1.5%; }
+    .hero-clothesline .clothesline-img { width: 130px; border-radius: 8px; }
+    .hero-clothesline .clothespin { width: 20px; }
+    @media (max-width: 1100px) {
+      .hero-clothesline { display: none; }
+    }
     .clothesline-item {
       transform-origin: top center;
       animation-name: sway;
@@ -159,7 +175,53 @@
   </div>
 
   <!-- HERO -->
-  <div style="width: 100%; padding: 100px 32px 90px;">
+  <div class="hero-wrap" style="width: 100%; padding: 100px 32px 90px;">
+
+    <!-- Carte de visite Ali Amzine, suspendue en haut de chaque côté -->
+    <div class="hero-clothesline">
+      <div class="clothesline-wrap">
+        <div class="clothesline-rope"></div>
+        <div class="clothesline-row">
+          <div class="clothesline-item" style="animation-duration: 4.6s; animation-delay: 0s;">
+            <svg class="clothespin" viewBox="0 0 30 46" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="wood1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#E7B978"/>
+                  <stop offset="55%" stop-color="#C98F4C"/>
+                  <stop offset="100%" stop-color="#A8703A"/>
+                </linearGradient>
+              </defs>
+              <rect x="1" y="2" width="11" height="42" rx="5" fill="url(#wood1)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="18" y="2" width="11" height="42" rx="5" fill="url(#wood1)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="3.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <rect x="20.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <ellipse cx="15" cy="15" rx="7" ry="4.5" fill="#9AA0AA" stroke="#6B6F76" stroke-width="1.2"/>
+              <circle cx="15" cy="15" r="2" fill="#4A4D52"/>
+            </svg>
+            <img src="assets/carte-visite-recto.png" alt="Media Tower — carte de visite, recto" class="clothesline-img">
+          </div>
+          <div class="clothesline-item" style="animation-duration: 5.3s; animation-delay: -2.1s;">
+            <svg class="clothespin" viewBox="0 0 30 46" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="wood2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#E7B978"/>
+                  <stop offset="55%" stop-color="#C98F4C"/>
+                  <stop offset="100%" stop-color="#A8703A"/>
+                </linearGradient>
+              </defs>
+              <rect x="1" y="2" width="11" height="42" rx="5" fill="url(#wood2)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="18" y="2" width="11" height="42" rx="5" fill="url(#wood2)" stroke="#7A4E24" stroke-width="1"/>
+              <rect x="3.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <rect x="20.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
+              <ellipse cx="15" cy="15" rx="7" ry="4.5" fill="#9AA0AA" stroke="#6B6F76" stroke-width="1.2"/>
+              <circle cx="15" cy="15" r="2" fill="#4A4D52"/>
+            </svg>
+            <img src="assets/carte-visite-verso.png" alt="Ali Amzine — carte de visite, verso" class="clothesline-img">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div style="max-width: 900px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px;">
       <div class="eyebrow">Media Tower · Maroc</div>
       <h1 style="font-size: 52px; line-height: 1.15; color: var(--ink); text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 2px 0 rgba(255,255,255,0.12), 0 4px 10px rgba(0,0,0,0.45), 0 12px 28px rgba(0,0,0,0.4);">Des logiciels SaaS conçus pour les entreprises marocaines</h1>
@@ -324,58 +386,6 @@
         <div style="display: flex; flex-direction: column; gap: 10px;">
           <h3 style="font-size: 19px; color: var(--gold);">Sur mesure</h3>
           <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Chaque déploiement est adapté à vos process réels, pas l'inverse.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CARTE DE VISITE -->
-  <div style="width: 100%; padding: 90px 32px 110px; background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden;">
-    <div style="max-width: 1180px; margin: 0 auto;">
-      <div style="text-align: center; max-width: 620px; margin: 0 auto 64px; display: flex; flex-direction: column; gap: 14px;">
-        <div class="eyebrow" style="align-self: center;">Contact direct</div>
-        <h2 style="font-size: 34px; color: var(--ink);">Ali Amzine — Ingénierie logicielle</h2>
-      </div>
-
-      <div class="clothesline-wrap">
-        <div class="clothesline-rope"></div>
-        <div class="clothesline-row">
-          <div class="clothesline-item" style="animation-duration: 4.6s; animation-delay: 0s;">
-            <svg class="clothespin" viewBox="0 0 30 46" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="wood1" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#E7B978"/>
-                  <stop offset="55%" stop-color="#C98F4C"/>
-                  <stop offset="100%" stop-color="#A8703A"/>
-                </linearGradient>
-              </defs>
-              <rect x="1" y="2" width="11" height="42" rx="5" fill="url(#wood1)" stroke="#7A4E24" stroke-width="1"/>
-              <rect x="18" y="2" width="11" height="42" rx="5" fill="url(#wood1)" stroke="#7A4E24" stroke-width="1"/>
-              <rect x="3.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
-              <rect x="20.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
-              <ellipse cx="15" cy="15" rx="7" ry="4.5" fill="#9AA0AA" stroke="#6B6F76" stroke-width="1.2"/>
-              <circle cx="15" cy="15" r="2" fill="#4A4D52"/>
-            </svg>
-            <img src="assets/carte-visite-recto.png" alt="Media Tower — carte de visite, recto" class="clothesline-img">
-          </div>
-          <div class="clothesline-item" style="animation-duration: 5.3s; animation-delay: -2.1s;">
-            <svg class="clothespin" viewBox="0 0 30 46" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="wood2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#E7B978"/>
-                  <stop offset="55%" stop-color="#C98F4C"/>
-                  <stop offset="100%" stop-color="#A8703A"/>
-                </linearGradient>
-              </defs>
-              <rect x="1" y="2" width="11" height="42" rx="5" fill="url(#wood2)" stroke="#7A4E24" stroke-width="1"/>
-              <rect x="18" y="2" width="11" height="42" rx="5" fill="url(#wood2)" stroke="#7A4E24" stroke-width="1"/>
-              <rect x="3.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
-              <rect x="20.5" y="6" width="6" height="34" rx="3" fill="#ffffff" opacity="0.12"/>
-              <ellipse cx="15" cy="15" rx="7" ry="4.5" fill="#9AA0AA" stroke="#6B6F76" stroke-width="1.2"/>
-              <circle cx="15" cy="15" r="2" fill="#4A4D52"/>
-            </svg>
-            <img src="assets/carte-visite-verso.png" alt="Ali Amzine — carte de visite, verso" class="clothesline-img">
-          </div>
         </div>
       </div>
     </div>
