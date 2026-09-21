@@ -125,7 +125,15 @@
     .hero-clothesline .clothesline-row { padding: 0 90px; }
     .hero-clothesline .clothesline-img { width: 260px; border-radius: 10px; }
     .hero-clothesline .clothespin { width: 38px; }
-    @media (max-width: 1650px) {
+    .hero-content { max-width: 900px; }
+    @media (max-width: 1649px) {
+      .hero-content { max-width: 620px; }
+      .hero-clothesline .clothesline-rope { left: 22px; right: 22px; }
+      .hero-clothesline .clothesline-row { padding: 0 22px; }
+      .hero-clothesline .clothesline-img { width: 140px; }
+      .hero-clothesline .clothespin { width: 24px; }
+    }
+    @media (max-width: 1180px) {
       .hero-clothesline { display: none; }
     }
     .clothesline-item {
@@ -158,6 +166,18 @@
       box-shadow: 0 22px 44px -10px rgba(0,0,0,0.6), 0 10px 18px -6px rgba(0,0,0,0.5);
       border: 1px solid rgba(255,255,255,0.15);
     }
+    .container { max-width: 1180px; margin: 0 auto; }
+    .section-head { text-align: center; max-width: 620px; margin: 0 auto 56px; display: flex; flex-direction: column; gap: 14px; }
+    .section-title { font-size: 34px; color: var(--ink); }
+    .eyebrow-center { align-self: center; }
+    .card-head { display: flex; align-items: flex-start; justify-content: space-between; }
+    .card-title { font-size: 24px; }
+    .card-title-sm { font-size: 22px; }
+    .card-desc { margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4); }
+    .card-cta { align-self: flex-start; margin-top: 8px; }
+    .why-item { display: flex; flex-direction: column; gap: 10px; }
+    .why-title { font-size: 19px; color: var(--gold); }
+    .why-text { margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6; }
     .solutions-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
     .why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
@@ -233,7 +253,7 @@
       </div>
     </div>
 
-    <div style="max-width: 900px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+    <div class="hero-content" style="margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px;">
       <div class="eyebrow">Media Tower · Maroc</div>
       <h1 style="font-size: 52px; line-height: 1.15; color: var(--ink); text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 2px 0 rgba(255,255,255,0.12), 0 4px 10px rgba(0,0,0,0.45), 0 12px 28px rgba(0,0,0,0.4);">Des logiciels SaaS conçus pour les entreprises marocaines</h1>
       <p style="font-size: 19px; color: #FFD452; max-width: 680px; line-height: 1.6; font-weight: 600;">Restauration, comptabilité, éducation, rendez-vous, artisanat, mobilité, financement, secteur public — nous développons des solutions métier sur mesure, pensées pour le terrain marocain et déployées en quelques semaines.</p>
@@ -262,17 +282,17 @@
 
   <!-- SOLUTIONS -->
   <div id="solutions" style="width: 100%; padding: 40px 32px 100px; background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div style="max-width: 1180px; margin: 0 auto;">
-      <div style="text-align: center; max-width: 620px; margin: 0 auto 56px; display: flex; flex-direction: column; gap: 14px;">
-        <div class="eyebrow" style="align-self: center;">Nos solutions</div>
-        <h2 style="font-size: 34px; color: var(--ink);">Huit secteurs, un même niveau d'exigence</h2>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow eyebrow-center">Nos solutions</div>
+        <h2 class="section-title">Huit secteurs, un même niveau d'exigence</h2>
       </div>
 
       <div class="solutions-grid">
 
         <!-- RestoIA 360 -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Restauration</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #FFC15E 0%, #E8720C 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:0s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -281,20 +301,20 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-restoia360.png" alt="Capture d'écran du tableau de bord RestoIA 360">
-          <h3 style="font-size: 24px;">RestoIA 360</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Automatisez la gestion de votre restaurant à 360°. Déjà en production au restaurant Mouda Palace (Fès).</p>
+          <h3 class="card-title">RestoIA 360</h3>
+          <p class="card-desc">Automatisez la gestion de votre restaurant à 360°. Déjà en production au restaurant Mouda Palace (Fès).</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Réservations, CRM clients &amp; portail B2B riads</li>
             <li><span class="dot"></span>Production, stocks cuisine &amp; caisse intégrée</li>
             <li><span class="dot"></span>Menu digital multilingue &amp; assistance WhatsApp</li>
             <li><span class="dot"></span>RH, staff &amp; facturation comptable</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20RestoIA%20360%20pour%20mon%20restaurant." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20RestoIA%20360%20pour%20mon%20restaurant." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
         <!-- RelaiCompta -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Comptabilité</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #5FEAD4 0%, #0E8074 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:0.4s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -303,20 +323,20 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-relaicompta.png" alt="Capture d'écran de l'espace client RelaiCompta">
-          <h3 style="font-size: 24px;">RelaiCompta</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Le relais digital entre les cabinets d'experts-comptables marocains et leurs clients.</p>
+          <h3 class="card-title">RelaiCompta</h3>
+          <p class="card-desc">Le relais digital entre les cabinets d'experts-comptables marocains et leurs clients.</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Lecture intelligente des documents comptables</li>
             <li><span class="dot"></span>Transfert automatique vers Sage, Odoo, Khabir</li>
             <li><span class="dot"></span>Espace client : TVA, honoraires, pièces attendues</li>
             <li><span class="dot"></span>Suivi en temps réel des envois cabinet ↔ client</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20RelaiCompta%20pour%20mon%20cabinet." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20RelaiCompta%20pour%20mon%20cabinet." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
         <!-- Gestion Scolaire Augmentée -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Éducation</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #B49BFF 0%, #6D28D9 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:0.8s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -325,20 +345,20 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-gestion-scolaire.png" alt="Capture d'écran du tableau de bord Gestion Scolaire Augmentée">
-          <h3 style="font-size: 24px;">Gestion Scolaire Augmentée</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">La gestion scolaire pensée pour le système éducatif marocain, du préscolaire au groupe multi-cycles.</p>
+          <h3 class="card-title">Gestion Scolaire Augmentée</h3>
+          <p class="card-desc">La gestion scolaire pensée pour le système éducatif marocain, du préscolaire au groupe multi-cycles.</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Présences par badge QR &amp; emplois du temps</li>
             <li><span class="dot"></span>Facturation, scolarité &amp; bulletins</li>
             <li><span class="dot"></span>Communication directe avec les parents</li>
             <li><span class="dot"></span>Export conforme au format Massar (Ministère)</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20solution%20de%20Gestion%20Scolaire%20Augment%C3%A9e%20pour%20mon%20%C3%A9tablissement." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20solution%20de%20Gestion%20Scolaire%20Augment%C3%A9e%20pour%20mon%20%C3%A9tablissement." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
         <!-- Veille Marchés -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Secteur public</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #FF9E8A 0%, #D62839 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:1.2s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -347,19 +367,19 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-veille-marches.jpg" alt="Capture d'écran de la plateforme Veille Marchés">
-          <h3 style="font-size: 24px;">Veille Marchés</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Le suivi des appels d'offres marocains, automatisé pour ne plus rien manquer.</p>
+          <h3 class="card-title">Veille Marchés</h3>
+          <p class="card-desc">Le suivi des appels d'offres marocains, automatisé pour ne plus rien manquer.</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Veille et récupération automatique des appels d'offres (marchespublics.gov.ma)</li>
             <li><span class="dot"></span>Centralisation des opportunités en un seul endroit</li>
             <li><span class="dot"></span>Gain de temps pour les entreprises qui répondent aux marchés publics</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Veille%20March%C3%A9s%20pour%20le%20suivi%20des%20appels%20d%27offres." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Veille%20March%C3%A9s%20pour%20le%20suivi%20des%20appels%20d%27offres." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
         <!-- WaqtApp -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Rendez-vous &amp; Services</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #5EEAD4 0%, #0D9488 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:1.6s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -368,20 +388,20 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-waqtapp.png" alt="Capture d'écran de l'annuaire WaqtApp">
-          <h3 style="font-size: 24px;">WaqtApp</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">La plateforme de prise de rendez-vous multi-secteurs pour les citoyens et professionnels marocains.</p>
+          <h3 class="card-title">WaqtApp</h3>
+          <p class="card-desc">La plateforme de prise de rendez-vous multi-secteurs pour les citoyens et professionnels marocains.</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Annuaire multi-secteurs : santé, beauté, notaires &amp; adouls, auto, artisans</li>
             <li><span class="dot"></span>Réservation en ligne avec créneaux horaires &amp; acompte (Stripe / CMI)</li>
             <li><span class="dot"></span>Tableau de bord Mawid Pro : gestion des RDV, équipe &amp; abonnement</li>
             <li><span class="dot"></span>Interface bilingue Français / Arabe avec support RTL complet</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20WaqtApp%20pour%20la%20prise%20de%20rendez-vous." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20WaqtApp%20pour%20la%20prise%20de%20rendez-vous." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
         <!-- Artisan 3D -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Artisanat &amp; Impression 3D</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #E3A467 0%, #92400E 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:2s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -390,20 +410,20 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-artisan3d.jpg" alt="Capture d'écran de l'application Artisan 3D">
-          <h3 style="font-size: 24px;">Artisan 3D <span dir="rtl" style="font-size: 17px; color: var(--ink-dim);">الصانع</span></h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">L'impression 3D et la conception paramétrique mises entre les mains des artisans, joailliers et créateurs du patrimoine marocain.</p>
+          <h3 class="card-title">Artisan 3D <span dir="rtl" style="font-size: 17px; color: var(--ink-dim);">الصانع</span></h3>
+          <p class="card-desc">L'impression 3D et la conception paramétrique mises entre les mains des artisans, joailliers et créateurs du patrimoine marocain.</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Texte vers modèle 3D, en arabe, français ou darija</li>
             <li><span class="dot"></span>Scan de pièces physiques &amp; création de moules</li>
             <li><span class="dot"></span>Génération automatique du G-Code, zéro friction</li>
             <li><span class="dot"></span>Journal de production : temps, coûts &amp; rentabilité</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Artisan%203D%20pour%20mon%20atelier." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Artisan%203D%20pour%20mon%20atelier." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
         <!-- Auto Flex Maroc -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Location de véhicules</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #F3D06B 0%, #A6790A 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:2.4s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -412,20 +432,20 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-autoflex.jpg" alt="Capture d'écran de l'application Auto Flex Maroc">
-          <h3 style="font-size: 24px;">Auto Flex Maroc</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">La mobilité nouvelle génération : réservation sans friction pour les conducteurs, pilotage complet pour les agences.</p>
+          <h3 class="card-title">Auto Flex Maroc</h3>
+          <p class="card-desc">La mobilité nouvelle génération : réservation sans friction pour les conducteurs, pilotage complet pour les agences.</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Carte interactive, agences dans plus de 20 villes</li>
             <li><span class="dot"></span>Filtres dynamiques &amp; confirmation directe WhatsApp</li>
             <li><span class="dot"></span>Tableau de bord agence : revenus, flotte, réservations</li>
             <li><span class="dot"></span>Interface Français / Arabe (RTL) / Anglais</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Auto%20Flex%20Maroc%20pour%20mon%20agence%20de%20location." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Auto%20Flex%20Maroc%20pour%20mon%20agence%20de%20location." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
         <!-- Maroc Entreprise Financement -->
         <div class="card">
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div class="card-head">
             <div class="pill">Financement &amp; Entreprises</div>
             <div class="icon-badge" style="width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg, #86EFAC 0%, #15803D 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;animation-delay:2.8s;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -434,15 +454,15 @@
           </div>
           </div>
           <img class="card-shot" src="assets/screenshot-marocfinancement.jpg" alt="Capture d'écran de la plateforme Maroc Entreprise Financement">
-          <h3 style="font-size: 24px;">Maroc Entreprise Financement</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Le copilote IA souverain qui accompagne les TPE, PME et startups marocaines de l'idée au déblocage des fonds.</p>
+          <h3 class="card-title">Maroc Entreprise Financement</h3>
+          <p class="card-desc">Le copilote IA souverain qui accompagne les TPE, PME et startups marocaines de l'idée au déblocage des fonds.</p>
           <ul class="feature-list">
             <li><span class="dot"></span>Diagnostic d'éligibilité Tamwilcom / Intelaka instantané</li>
             <li><span class="dot"></span>Business Plans &amp; statuts SARL générés automatiquement</li>
             <li><span class="dot"></span>Veille économique en temps réel sur l'écosystème marocain</li>
             <li><span class="dot"></span>Expert financier IA conversationnel, bilingue AR / FR</li>
           </ul>
-          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Maroc%20Entreprise%20Financement%20pour%20mon%20projet." class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Demander une démo</a>
+          <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Maroc%20Entreprise%20Financement%20pour%20mon%20projet." class="btn btn-line card-cta">Demander une démo</a>
         </div>
 
       </div>
@@ -451,37 +471,37 @@
 
   <!-- EXPERTISE TECHNIQUE -->
   <div style="width: 100%; padding: 90px 32px; background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div style="max-width: 1180px; margin: 0 auto;">
+    <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto 20px; display: flex; flex-direction: column; gap: 14px;">
-        <div class="eyebrow" style="align-self: center;">Sous le capot</div>
-        <h2 style="font-size: 34px; color: var(--ink);">Une ingénierie logicielle de haut niveau</h2>
+        <div class="eyebrow eyebrow-center">Sous le capot</div>
+        <h2 class="section-title">Une ingénierie logicielle de haut niveau</h2>
         <p style="margin: 0; color: var(--ink-dim); font-size: 16px; line-height: 1.6;">Notre approche allie la rigueur de l'ingénierie logicielle — robustesse, sécurité, scalabilité — à la puissance des technologies modernes d'intelligence artificielle et du cloud. Que ce soit pour des ERP industriels, des plateformes SaaS complexes ou des écosystèmes d'automatisation, nous transformons des visions métiers en architectures vivantes et performantes.</p>
       </div>
 
       <div class="why-grid" style="margin-top: 40px;">
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">Architecture &amp; conception</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Plateformes SaaS, ERP multi-modules et applications transactionnelles à haute disponibilité. Modélisation de données, flux asynchrones, sécurisation des parcours (RBAC, audits, conformité).</p>
+        <div class="why-item">
+          <h3 class="why-title">Architecture &amp; conception</h3>
+          <p class="why-text">Plateformes SaaS, ERP multi-modules et applications transactionnelles à haute disponibilité. Modélisation de données, flux asynchrones, sécurisation des parcours (RBAC, audits, conformité).</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">Backends haute performance</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">JavaScript / TypeScript et Python côté web, Go, Rust, Kotlin, Java ou C# pour les systèmes exigeants — le langage optimal choisi selon les contraintes réelles du projet.</p>
+        <div class="why-item">
+          <h3 class="why-title">Backends haute performance</h3>
+          <p class="why-text">JavaScript / TypeScript et Python côté web, Go, Rust, Kotlin, Java ou C# pour les systèmes exigeants — le langage optimal choisi selon les contraintes réelles du projet.</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">IA générative &amp; agents métiers</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Intégration avancée de modèles IA, workflows RAG et chatbots métiers robustes interconnectés à vos bases de données.</p>
+        <div class="why-item">
+          <h3 class="why-title">IA générative &amp; agents métiers</h3>
+          <p class="why-text">Intégration avancée de modèles IA, workflows RAG et chatbots métiers robustes interconnectés à vos bases de données.</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">Cloud, CI/CD &amp; automatisation</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Pipelines d'intégration et de déploiement continus pour des livraisons fluides et sans rupture, automatisation des processus métiers par webhooks et architectures réactives.</p>
+        <div class="why-item">
+          <h3 class="why-title">Cloud, CI/CD &amp; automatisation</h3>
+          <p class="why-text">Pipelines d'intégration et de déploiement continus pour des livraisons fluides et sans rupture, automatisation des processus métiers par webhooks et architectures réactives.</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">Audit &amp; modernisation</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Refactorisation de code, amélioration des performances critiques, sécurisation des accès et migration vers des architectures Cloud modernes.</p>
+        <div class="why-item">
+          <h3 class="why-title">Audit &amp; modernisation</h3>
+          <p class="why-text">Refactorisation de code, amélioration des performances critiques, sécurisation des accès et migration vers des architectures Cloud modernes.</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">GEO / SEO nouvelle génération</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Optimisation du référencement et de la présence des plateformes à l'ère des moteurs de recherche génératifs.</p>
+        <div class="why-item">
+          <h3 class="why-title">GEO / SEO nouvelle génération</h3>
+          <p class="why-text">Optimisation du référencement et de la présence des plateformes à l'ère des moteurs de recherche génératifs.</p>
         </div>
       </div>
 
@@ -501,23 +521,23 @@
 
   <!-- POURQUOI -->
   <div id="pourquoi" style="width: 100%; padding: 90px 32px;">
-    <div style="max-width: 1180px; margin: 0 auto;">
-      <div style="text-align: center; max-width: 620px; margin: 0 auto 56px; display: flex; flex-direction: column; gap: 14px;">
-        <div class="eyebrow" style="align-self: center;">Pourquoi Media Tower</div>
-        <h2 style="font-size: 34px; color: var(--ink);">Un partenaire technique basé au Maroc</h2>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow eyebrow-center">Pourquoi Media Tower</div>
+        <h2 class="section-title">Un partenaire technique basé au Maroc</h2>
       </div>
       <div class="why-grid">
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">Ancré sur le terrain</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Chaque solution est conçue avec des professionnels marocains du secteur, pas sur étagère.</p>
+        <div class="why-item">
+          <h3 class="why-title">Ancré sur le terrain</h3>
+          <p class="why-text">Chaque solution est conçue avec des professionnels marocains du secteur, pas sur étagère.</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">3 langues</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Accompagnement et interfaces en français, arabe et anglais selon vos besoins.</p>
+        <div class="why-item">
+          <h3 class="why-title">3 langues</h3>
+          <p class="why-text">Accompagnement et interfaces en français, arabe et anglais selon vos besoins.</p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <h3 style="font-size: 19px; color: var(--gold);">Sur mesure</h3>
-          <p style="margin: 0; color: var(--ink-dim); font-size: 15px; line-height: 1.6;">Chaque déploiement est adapté à vos process réels, pas l'inverse.</p>
+        <div class="why-item">
+          <h3 class="why-title">Sur mesure</h3>
+          <p class="why-text">Chaque déploiement est adapté à vos process réels, pas l'inverse.</p>
         </div>
       </div>
     </div>
@@ -525,10 +545,10 @@
 
   <!-- RESSOURCES -->
   <div id="ressources" style="width: 100%; padding: 90px 32px; background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div style="max-width: 1180px; margin: 0 auto;">
-      <div style="text-align: center; max-width: 620px; margin: 0 auto 56px; display: flex; flex-direction: column; gap: 14px;">
-        <div class="eyebrow" style="align-self: center;">Ressources</div>
-        <h2 style="font-size: 34px; color: var(--ink);">Nos dossiers à télécharger</h2>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow eyebrow-center">Ressources</div>
+        <h2 class="section-title">Nos dossiers à télécharger</h2>
       </div>
 
       <div class="solutions-grid">
@@ -539,9 +559,9 @@
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/>
             </svg>
           </div>
-          <h3 style="font-size: 22px;">Dossier de Compétences</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Notre vision, notre stack technologique et notre offre de services détaillée — architecture, IA générative, cloud et modernisation.</p>
-          <a href="assets/Media-Tower-Dossier-de-Competences.pdf" target="_blank" rel="noopener" class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Consulter le PDF</a>
+          <h3 class="card-title-sm">Dossier de Compétences</h3>
+          <p class="card-desc">Notre vision, notre stack technologique et notre offre de services détaillée — architecture, IA générative, cloud et modernisation.</p>
+          <a href="assets/Media-Tower-Dossier-de-Competences.pdf" target="_blank" rel="noopener" class="btn btn-line card-cta">Consulter le PDF</a>
         </div>
 
         <div class="card">
@@ -550,9 +570,9 @@
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/>
             </svg>
           </div>
-          <h3 style="font-size: 22px;">Présentation Logiciels &amp; Applications</h3>
-          <p style="margin: 0; color: #FFFFFF; font-size: 15px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Le catalogue complet de nos huit solutions : fonctionnalités, captures d'écran et valeur ajoutée pour chaque secteur.</p>
-          <a href="assets/Media-Tower-Presentation-Logiciels-Applications.pdf" target="_blank" rel="noopener" class="btn btn-line" style="align-self: flex-start; margin-top: 8px;">Consulter le PDF</a>
+          <h3 class="card-title-sm">Présentation Logiciels &amp; Applications</h3>
+          <p class="card-desc">Le catalogue complet de nos huit solutions : fonctionnalités, captures d'écran et valeur ajoutée pour chaque secteur.</p>
+          <a href="assets/Media-Tower-Presentation-Logiciels-Applications.pdf" target="_blank" rel="noopener" class="btn btn-line card-cta">Consulter le PDF</a>
         </div>
 
       </div>
