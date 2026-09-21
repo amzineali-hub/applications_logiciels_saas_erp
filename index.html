@@ -136,6 +136,17 @@
     @media (max-width: 1180px) {
       .hero-clothesline { display: none; }
     }
+    .hero-cards-mobile { display: none; gap: 14px; justify-content: center; margin-top: 32px; }
+    .hero-cards-mobile img {
+      width: 130px;
+      max-width: 40vw;
+      border-radius: 10px;
+      box-shadow: 0 16px 32px -10px rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    @media (max-width: 1180px) {
+      .hero-cards-mobile { display: flex; }
+    }
     .clothesline-item {
       transform-origin: top center;
       animation-name: sway;
@@ -260,6 +271,10 @@
       <div style="display: flex; gap: 16px; margin-top: 8px; flex-wrap: wrap; justify-content: center;">
         <a href="https://wa.me/212674293063?text=Bonjour%2C%20je%20souhaite%20une%20d%C3%A9mo%20d%27une%20solution%20Media%20Tower." class="btn btn-gold">Demander une démo gratuite</a>
         <a href="#solutions" class="btn btn-line">Voir nos solutions</a>
+      </div>
+      <div class="hero-cards-mobile">
+        <img src="assets/carte-visite-recto.png" alt="Media Tower — carte de visite, recto">
+        <img src="assets/carte-visite-verso.png" alt="Ali Amzine — carte de visite, verso">
       </div>
     </div>
   </div>
